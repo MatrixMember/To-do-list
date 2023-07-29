@@ -1,15 +1,6 @@
 {
    const tasks = [
-      {
-         content: " zrobić zakupy",
-         done: false,
-
-      },
-
-      {
-         content: " pójść na trennig",
-         done: true,
-      },
+      
    ];
 
    const addNewTask = (newTaskContent) => {
