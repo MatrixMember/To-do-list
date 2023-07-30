@@ -1,6 +1,6 @@
 {
    const tasks = [
-      
+
    ];
 
    const addNewTask = (newTaskContent) => {
@@ -16,7 +16,7 @@
    }
 
    const toggleTaskDone = (taskIndex) => {
-      tasks[taskIndex].done = !tasks[taskIndex].done; 
+      tasks[taskIndex].done = !tasks[taskIndex].done;
       render();
    }
 
@@ -40,16 +40,14 @@
 
    const render = () => {
       let htmlString = "";
-
       for (const task of tasks) {
          htmlString += `
-         <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
-
+      <li class="list__item ${task.done ? "list__item--done" : ""}">
          <button class="js-done">zrobione?</button>
          <button class="js-remove">usuń</button>
          ${task.content}
-         </li>
-         `;
+      </li>
+   `;
       }
 
       document.querySelector(".js-tasks").innerHTML = htmlString;
