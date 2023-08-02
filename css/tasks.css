@@ -29,15 +29,15 @@
     word-break: break-word;
 }
 
-.list__item--done {
+.list__item--toggleDone {
     background-color: hsl(120, 56%, 34%);
 }
 
-.list__item--done:hover {
+.list__item--toggleDone:hover {
     background-color: hsl(120, 53%, 39%);
 }
 
-.list__item--done:active {
+.list__item--toggleDone:active {
     background-color: hsl(120, 48%, 53%);
 }
 
