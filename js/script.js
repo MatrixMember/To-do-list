@@ -42,9 +42,9 @@
          htmlString += `
       <li class="list__item js-task">
          <button class="list__button  list__item--toggleDone js-done ">
-         ${task.done ? "✔" : ""}
-         </button>
-         <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>
+          ${task.done ? "✔" : ""}
+          </button>
+          <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>
          <button class="list__button list__button--remove js-remove">🗑
          </button>
       </li>
@@ -60,14 +60,15 @@
 
    const onFormSubmit = (event) => {
       event.preventDefault();
+      const newTaskElement = document.querySelector(".js-newTask");
+      const newTaskContent = newTaskElement.value.trim();
 
-      const newTaskContent = document.querySelector(".js-newTask").value.trim();
-
-      if (newTaskContent === "") {
-         return;
+      if (newTaskContent !== "") {
+         addNewTask(newTaskContent);
+         newTaskElement.value = "";
       }
 
-      addNewTask(newTaskContent);
+      newTaskElement.focus();
 
    }
 
