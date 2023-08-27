@@ -1,6 +1,6 @@
 .tasks {
     list-style: none;
-    padding: 0;
+    padding: 28;
     margin: 0;
 }
 
@@ -10,11 +10,21 @@
 
 .list__item {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 30px 1fr 30px;
     align-items: center;
     grid-gap: 10px;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    word-break: break-word;
+}
+
+.tasksList__item--hidden {
+    display: none;
+}
+
+.tasksList__taskContent {
+    margin: 0;
+    padding: 0;
 }
 
 .list__button {
@@ -23,6 +33,9 @@
     width: 30px;
     height: 30px;
     padding: 0;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
 }
 
 .list__content {
@@ -35,6 +48,8 @@
 
 .list__item--toggleDone:hover {
     background-color: hsl(120, 53%, 39%);
+    transform: scale(1.2);
+    transition: 1s;
 }
 
 .list__item--toggleDone:active {
@@ -48,6 +63,8 @@
 
 .list__button--remove:hover {
     background-color: hsl(350, 87%, 48%);
+    transform: scale(1.2);
+    transition: 1s;
 }
 
 .list__button--remove:active {

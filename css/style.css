@@ -9,4 +9,5 @@ html {
 body {
     background:#eee;
     font-family: 'Montserrat', sans-serif;
+    justify-content: center;
 }
